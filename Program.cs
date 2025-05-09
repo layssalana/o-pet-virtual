@@ -30,10 +30,10 @@ class Program
                 case 2: service.Comer(); break;
                 case 3: service.Dormir(); break;
                 case 4: service.Brincar(); break;
-                case 5: service.LevarVeterinario(); break;
+                case 5: service.Curar(); break;
                 case 0:
                     Console.WriteLine("Salvando...");
-                    PetStorage.Salvar(pet);
+                    PetStorage.Salvar(service.GetPet());
                     break;
                 default:
                     Console.WriteLine("Opção inválida.");
@@ -44,4 +44,3 @@ class Program
         Console.WriteLine("Jogo encerrado.");
     }
 }
-
